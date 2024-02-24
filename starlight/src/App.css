@@ -24,6 +24,15 @@
     transform: rotate(360deg);
   }
 }
+.video{
+  transition: 0.1s;
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.55) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset;
+}
+
+.video:hover{
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
