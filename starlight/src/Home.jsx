@@ -11,12 +11,17 @@ const [videos,setVideos] = useState(['Untitled4.mp4','Untitled4.mp4','Untitled4.
     <>
     
     <Navbar />
- <div style={{padding:'100px',display:'flex',flexDirection:'row',flexWrap:'wrap',justifyContent:'space-between'}}>
-    {videos.map((item)=>{
-       return <Video />
+
+    <div style={{paddingRight:'100px',paddingLeft:'100px',marginTop:'120px'}}>
+    <h1>Video Gallery</h1>
+ <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap',justifyContent:'space-between'}}>
+    {videos.map((item,index)=>{
+       return <Video key={index}/>
     })}
     
     
+     </div>
+     
      </div>
     
     </>
