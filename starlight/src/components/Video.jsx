@@ -15,7 +15,7 @@ const Video = (props) => {
   return (
     <>
    
-        <video  className="video" ref={videoRef} onMouseEnter={mouseEntered}  onMouseLeave={mouseLeft}  style={{width:screen==="mobile"?"100%":'30%', borderRadius:'10px',overflow: 'hidden',marginBottom:'60px'}}>
+        <video  className="video" ref={videoRef} onMouseEnter={mouseEntered} controls={screen === "mobile" ? true : false} onMouseLeave={mouseLeft}  style={{width:screen==="mobile"?"100%":'30%', borderRadius:'10px',overflow: 'hidden',marginBottom:'60px'}}>
             <source src={videoOne}/>
         </video>
   
