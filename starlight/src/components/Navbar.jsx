@@ -8,7 +8,12 @@ const Navbar = (props) => {
     const MobileView = ()=>{
         return (
             <>
-           <div className="mobileMenu" style={{display:'flex',flexDirection:'row',position:'fixed',bottom:'0',left:'0',right:'0',zIndex:999,backgroundColor:'white',height:'50px',width:'100vw'}}></div>
+           <div className="mobileMenu" style={{display:'flex',flexDirection:'row',position:'fixed',justifyContent:'space-around',alignItems:"center",bottom:'0',left:'0',right:'0',zIndex:999,backgroundColor:'rgba(36, 36, 36, 1)',height:'70px',width:'100vw'}}>
+           <Link to='/blog'> <h4>Blog</h4></Link>
+           <Link to='/gallery'> <h4>Gallery</h4></Link>
+           <Link to='/tutorials'> <h4>Tutorials</h4></Link>
+           <Link to='/contact'> <h4>Contact</h4></Link>
+           </div>
             </>
         )
     }
