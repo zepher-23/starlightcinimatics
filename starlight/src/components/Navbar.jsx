@@ -4,6 +4,14 @@ import '../App.css'
 
 const Navbar = (props) => {
     const screen = props.screen
+
+    const MobileView = ()=>{
+        return (
+            <>
+           <div className="mobileMenu" style={{display:'flex',flexDirection:'row',position:'fixed',bottom:'0',left:'0',right:'0',zIndex:999,backgroundColor:'white',height:'50px',width:'100vw'}}></div>
+            </>
+        )
+    }
     
     
   return (
@@ -13,7 +21,7 @@ const Navbar = (props) => {
         screen==='mobile'?<h2 style={{flexGrow:'1',textAlign:'center',fontStyle:'italic',fontWeight:800,color:'#feffa8'}}> STARLIGHT CINEMATICS</h2>
         :<h2 style={{flexGrow:'1',paddingLeft:'100px',fontStyle:'italic',fontWeight:800,color:'#feffa8'}}> STARLIGHT CINEMATICS</h2>
         }
-        {screen==='mobile'?"":<div style={{width:'25%',display:'flex',flexDirection:'row',alignItems:"center",justifyContent:'space-around',paddingRight:'100px'}}>
+        {screen==='mobile'?null:<div style={{width:'25%',display:'flex',flexDirection:'row',alignItems:"center",justifyContent:'space-around',paddingRight:'100px'}}>
            <Link to='/blog'> <h4>Blog</h4></Link>
            <Link to='/gallery'> <h4>Gallery</h4></Link>
            <Link to='/tutorials'> <h4>Tutorials</h4></Link>
@@ -21,6 +29,7 @@ const Navbar = (props) => {
         </div>}
         
     </div></div>
+    {screen==='mobile'?<MobileView/>:null}
     </>
   );
 };
